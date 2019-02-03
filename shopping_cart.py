@@ -51,7 +51,7 @@ for selected_id in selected_ids:
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
     print(" + " + matching_product["name"] + " " + str(matching_product["price"]))
-print(line_break + "Subtotal = " + str('${:,.2f}'.format(total_price)))
+print(line_break + "Subtotal: " + str('${:,.2f}'.format(total_price)))
 tax = total_price * .06
 print("Plus tax: " + str('${:,.2f}'.format(tax)))
 total = total_price + tax
