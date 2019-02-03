@@ -45,15 +45,15 @@ line_break = "\r\n" + "---------------------------------------------------------
 store_name = "D.C. Grocery"
 website = "www.dcgrocery.com"
 phone = "+1 (123)-456-7899"
-print(store_name + line_break + "\r\n" + website + "\r\n" + phone + "\r\n" + "START TIME: " + time.strftime("%x") + " at " + time.strftime("%X") + line_break + "ITEMS IN CART")
+print(line_break + store_name + line_break + "\r" + website + "\r\n" + phone + "\r\n" + "Start Time: " + time.strftime("%x") + " at " + time.strftime("%X") + line_break + "Items in Cart")
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
     print(" + " + matching_product["name"] + " " + str(matching_product["price"]))
-print(line_break + "Subtotal = " + str(total_price))
+print(line_break + "Subtotal = " + str('${:,.2f}'.format(total_price)))
 tax = total_price * .06
-print("Plus tax: " + str(tax))
+print("Plus tax: " + str('${:,.2f}'.format(tax)))
 total = total_price + tax
-print("Total: " + str(total))
+print("Total: " + str('${:,.2f}'.format(total)))
 
