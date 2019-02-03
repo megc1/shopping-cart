@@ -38,12 +38,22 @@ while True:
         #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
         selected_ids.append(selected_id)
 
+
+
+time = datetime.datetime.now()
+line_break = "\r\n" + "----------------------------------------------------------------" + "\r\n"
+store_name = "D.C. Grocery"
+website = "www.dcgrocery.com"
+phone = "+1 (123)-456-7899"
+print(store_name + line_break + "\r\n" + website + "\r\n" + phone + "\r\n" + "START TIME: " + time.strftime("%x") + " at " + time.strftime("%X") + line_break + "ITEMS IN CART")
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+    print(" + " + matching_product["name"] + " " + str(matching_product["price"]))
+print(line_break + "Subtotal = " + str(total_price))
+tax = total_price * .06
+print("Plus tax: " + str(tax))
+total = total_price + tax
+print("Total: " + str(total))
 
-time = datetime.datetime.now()
-print("START TIME: " + time.strftime("%x") + " at " + time.strftime("%X"))
-print("TOTAL PRICE = " + str(total_price))
