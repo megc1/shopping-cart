@@ -44,5 +44,6 @@ for selected_id in selected_ids:
     total_price = total_price + matching_product["price"]
     print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
-
+time = datetime.datetime.now()
+print("START TIME: " + time.strftime("%x") + " at " + time.strftime("%X"))
 print("TOTAL PRICE = " + str(total_price))
