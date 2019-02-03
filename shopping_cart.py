@@ -45,7 +45,7 @@ line_break = "\r\n" + "---------------------------------------------------------
 store_name = "D.C. Grocery"
 website = "www.dcgrocery.com"
 phone = "+1 (123)-456-7899"
-print(line_break + store_name + line_break + "\r" + website + "\r\n" + phone + "\r\n" + "Start Time: " + time.strftime("%x") + " at " + time.strftime("%X") + line_break + "Items in Cart")
+print(line_break + store_name + line_break + "\r" + website + "\r\n" + phone + "\r\n" + "Start Time: " + time.strftime("%x") + " at " + time.strftime("%X") + line_break + "Items in Cart: ")
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
@@ -56,4 +56,4 @@ tax = total_price * .06
 print("Plus tax: " + str('${:,.2f}'.format(tax)))
 total = total_price + tax
 print("Total: " + str('${:,.2f}'.format(total)))
-
+print("Thank you for shopping at D.C. Grocery! We hope to see you soon!")
