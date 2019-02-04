@@ -31,6 +31,12 @@ while True:
     selected_id = input("Please input a product identifier. Enter \"DONE\" if finished. ")
     if selected_id == "DONE":
         break
+    elif int(selected_id) < 1:
+        print("Are you sure this product identifier is correct? Please try again!")
+        continue
+    elif int(selected_id) > 20:
+        print("Are you sure this product identifier is correct? Please try again!")
+        continue
     else:
         #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         #matching_product = matching_products[0]
