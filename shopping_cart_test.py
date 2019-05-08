@@ -1,6 +1,7 @@
 import pytest
+import datetime
 
-from shopping_cart import to_usd
+from shopping_cart import to_usd, human_friendly_timestamp
 
 
 def test_to_usd():
@@ -12,3 +13,7 @@ def test_to_usd():
 
     # display a thousands separators
     assert to_usd(23456789.3333) == "$23,456,789.33"
+
+def test_human_friendly_timestamp():
+    now = datetime.datetime.now()
+    assert "at" in human_friendly_timestamp(now)

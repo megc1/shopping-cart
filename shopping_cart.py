@@ -1,13 +1,16 @@
 # shopping_cart.py
-
+import datetime
 #Basic Challenge: Formatting Prices
 def to_usd(price):
     return "${0:,.2f}".format(price)
 
+#Basic Challenge: Formatting Timestamps
+#Reference: https://docs.python.org/2/library/datetime.html
+def human_friendly_timestamp(time):
+    formatted_time = time.strftime("%B %d %Y ") + " at " + time.strftime("%I:%M%p")
+    return formatted_time
+
 if __name__ == "__main__":
-
-    import datetime
-
     products = [
         {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
         {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -51,14 +54,12 @@ if __name__ == "__main__":
             #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
             selected_ids.append(selected_id)
 
-
-
-    time = datetime.datetime.now()
+    my_time = human_friendly_timestamp(datetime.datetime.today())
     line_break = "\r\n" + "----------------------------------------------------------------" + "\r\n"
     store_name = "D.C. Grocery"
     website = "www.dcgrocery.com"
     phone = "+1 (123)-456-7899"
-    print(line_break + store_name + line_break + "\r" + website + "\r\n" + phone + "\r\n" + "Start Time: " + time.strftime("%x") + " at " + time.strftime("%X") + line_break + "Items in Cart: ")
+    print(line_break + store_name + line_break + "\r" + website + "\r\n" + phone + "\r\n" + "Start Time: " + my_time + line_break + "Items in Cart: ")
     for selected_id in selected_ids:
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0]
