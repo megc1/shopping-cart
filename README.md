@@ -10,11 +10,11 @@ This project allows the user to enter item numbers for a set of products being p
 * Python 3.7
 * Pip
 
-### Installation
+### Installation:
 
 Clone this repository and save it to your local device. 
 
-## Usage
+## Usage:
 Open the command line and navigate to the shopping-cart folder
 Run the shopping cart script:
 ```sh
