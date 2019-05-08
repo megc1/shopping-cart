@@ -16,6 +16,11 @@ def find_product(ids, products):
     matching_product = matching_products[0]
     return matching_product
 
+def calculate_total_price(total_price):
+    tax = total_price * .06
+    total = total_price + tax
+    return total
+
 if __name__ == "__main__":
     products = [
         {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -69,6 +74,6 @@ if __name__ == "__main__":
     print(line_break + "Subtotal: " + str('${:,.2f}'.format(total_price)))
     tax = total_price * .06
     print("Plus tax: " + str('${:,.2f}'.format(tax)))
-    total = total_price + tax
+    total = calculate_total_price(total_price)
     print("Total: " + str('${:,.2f}'.format(total)))
     print("Thank you for shopping at D.C. Grocery! We hope to see you soon!")

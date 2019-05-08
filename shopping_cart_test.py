@@ -1,7 +1,7 @@
 import pytest
 import datetime
 
-from shopping_cart import to_usd, human_friendly_timestamp, find_product
+from shopping_cart import to_usd, human_friendly_timestamp, find_product, calculate_total_price
 
 
 def test_to_usd():
@@ -32,3 +32,6 @@ def test_find_product():
     # IndexError if no match
     with pytest.raises(IndexError):
         find_product("2222", products)
+
+def test_calculate_total_price():
+    assert calculate_total_price(4) == 4.24
