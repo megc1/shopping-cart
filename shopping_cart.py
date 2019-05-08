@@ -1,4 +1,10 @@
 # shopping_cart.py
+
+#Basic Challenge: Formatting Prices
+def to_usd(price):
+    return "${0:,.2f}".format(price)
+
+
 import datetime
 
 products = [
