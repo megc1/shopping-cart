@@ -1,4 +1,5 @@
-# shopping-cart
+# Shopping Cart Project
+[![Build Status](https://travis-ci.org/megc1/shopping-cart.svg?branch=master)](https://travis-ci.org/megc1/shopping-cart)
 
 ## Installation
 
