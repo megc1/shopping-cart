@@ -17,9 +17,9 @@ Clone this repository and save it to your local device.
 ## Usage
 Open the command line and navigate to the shopping-cart folder
 Run the shopping cart script:
-'''sh
+```sh
 python shopping_cart.py
-''''
+```
 
 ## To Test:
 Create a virtual environment for this project. 
