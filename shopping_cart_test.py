@@ -11,7 +11,7 @@ def test_to_usd():
     # display two decimal places
     assert to_usd(2.3) == "$2.30"
 
-    # display a thousands separators
+    # display a thousands separator
     assert to_usd(23456789.3333) == "$23,456,789.33"
 
 def test_human_friendly_timestamp():
